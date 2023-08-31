@@ -4,6 +4,9 @@ variable "db_name" {
 
 variable "db_username" {
   description = "RDS root username"
+  validation {
+    condition = contains(["super", "user"], var.db_username)
+  }
 }
 
 variable "db_password" {
