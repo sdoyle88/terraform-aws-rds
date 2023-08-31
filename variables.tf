@@ -10,3 +10,7 @@ variable "db_password" {
   description = "RDS root user password"
   sensitive   = true
 }
+
+variable "security_group_name" {
+  description = "Name for the db security group"
+}

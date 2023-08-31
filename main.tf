@@ -26,7 +26,7 @@ resource "aws_db_subnet_group" "education" {
 }
 
 resource "aws_security_group" "rds" {
-  name   = "education_rds"
+  name   = var.security_group_name
   vpc_id = module.vpc.vpc_id
 
   ingress {
