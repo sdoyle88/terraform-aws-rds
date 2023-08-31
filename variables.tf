@@ -6,6 +6,7 @@ variable "db_username" {
   description = "RDS root username"
   validation {
     condition = contains(["super", "user"], var.db_username)
+    error_message = "Should contain either super, or user"
   }
 }
 
